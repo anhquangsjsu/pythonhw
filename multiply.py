@@ -8,8 +8,8 @@ def multiply_list(list):
 
 	Parameters
 	----------
-	list[int[
-		the input list whose elements are to be multiplied
+	list[int]
+			the input list whose elements are to be multiplied
 	
 	Returns
 	-------
