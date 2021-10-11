@@ -23,7 +23,32 @@ def multiply_list(list):
 	#To store the quotation result to use after each loop
 	result = 1
 	for number in list:
-		if (number.isdigit() == False):
+		if (is_number(number) == False):
 			return False
-		result = result * number
+		result = result * float(number)
 	return result
+
+def is_number(str):
+	"""
+    A helper function to check if a str provided contain float or int
+
+	This function will take in a string, try converting it to float the catch exception 
+	if the value cannot be converted to float. It will return True when there is not exception
+	False otherwise.
+	
+	Parameters
+	----------
+	str		String
+			a string that is used to test if it contains numemeric values or not
+
+	Returns
+	-------
+	boolean
+			determine if the provided str is a float number or not 
+
+    """
+	try:
+		float(str)
+		return True
+	except ValueError:
+		return False
