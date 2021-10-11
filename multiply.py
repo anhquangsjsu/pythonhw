@@ -23,5 +23,7 @@ def multiply_list(list):
 	#To store the quotation result to use after each loop
 	result = 1
 	for number in list:
+		if (number.isdigit() == False):
+			return False
 		result = result * number
 	return result
